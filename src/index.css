@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --- Backgrounds & Surfaces --- */
+    --background: 0 0% 98%;          /* #FAFAFA — warm off-white */
+    --foreground: 222 47% 11%;       /* #0F172A — Slate-900 */
+
+    --card: 0 0% 100%;               /* #FFFFFF — pure white, elevated */
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* --- Primary = Electric Blue accent --- */
+    --primary: 221 100% 50%;         /* #0052FF */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+
+    /* --- Secondary = Slate-100 muted surface --- */
+    --secondary: 210 40% 96%;        /* #F1F5F9 */
+    --secondary-foreground: 222 47% 11%;
+
+    /* --- Muted --- */
+    --muted: 210 40% 96%;            /* #F1F5F9 */
+    --muted-foreground: 215 16% 47%; /* #64748B — Slate-500 */
+
+    /* --- Accent (same as primary for shadcn components) --- */
+    --accent: 221 100% 50%;          /* #0052FF */
+    --accent-foreground: 0 0% 100%;
+
+    /* --- Destructive --- */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* --- Borders & Inputs --- */
+    --border: 214 32% 91%;           /* #E2E8F0 — Slate-200 */
+    --input: 214 32% 91%;
+    --ring: 221 100% 50%;            /* #0052FF — focus ring matches accent */
+
+    /* --- Border radius --- */
+    --radius: 0.75rem;               /* 12px — rounded-xl base */
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 221 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 221 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
